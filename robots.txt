@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://estructura-sa.com/sitemap.xml

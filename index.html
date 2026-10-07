@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Estructura Group S.A.</title>
+<meta name="description" content="Estructura Group S.A. — construcción, remodelación y mejoras para empresas en Guatemala. Obra civil, estructuras metálicas, movimiento de tierras, tablayeso, tuberías, pavimentos y sistemas anticaídas.">
+<link rel="canonical" href="https://estructura-sa.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Estructura Group S.A. | Construcción y estructuras metálicas en Guatemala">
+<meta property="og:description" content="Soluciones de construcción, remodelación y mejoras para su empresa, desde la planificación hasta la entrega.">
+<meta property="og:image" content="https://estructura-sa.com/assets/img/og.jpg">
+<meta property="og:url" content="https://estructura-sa.com/">
+<meta property="og:locale" content="es_GT">
+<meta name="theme-color" content="#121416">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Estructura Group S.A.",
+  "url": "https://estructura-sa.com/",
+  "logo": "https://estructura-sa.com/assets/img/logo.png",
+  "image": "https://estructura-sa.com/assets/img/og.jpg",
+  "description": "Construcción, remodelación y mejoras para empresas: obra civil, estructuras metálicas, movimiento de tierras, tablayeso y cielo falso, tuberías, análisis estructural, sistemas anticaídas y pavimentos.",
+  "areaServed": "Guatemala",
+  "address": {"@type": "PostalAddress", "addressCountry": "GT"}
+}
+</script>
+<style>
+/* Layout: obra en blanco y gris acero; el marco de la "E" del logo enmarca titulares; amarillo de cinta de seguridad solo en acciones */
+:root{
+  --ink:#121416;        /* negro del logo */
+  --ink-2:#1d2125;
+  --steel:#8e959c;      /* gris acero del logo */
+  --steel-d:#5d646b;
+  --paper:#f6f7f8;      /* blanco frío */
+  --concrete:#e6e8ea;
+  --line:#d3d7db;
+  --signal:#f2b705;     /* cinta de seguridad */
+  --white:#ffffff;
+  --f-display:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+  --f-body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --wrap:1180px;
+  --gut:clamp(16px,4vw,40px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.65 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);font-weight:300;margin:0;text-wrap:balance;letter-spacing:.02em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.label{font:500 .72rem/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--steel-d)}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:.6em;font:500 .9rem/1 var(--f-body);letter-spacing:.04em;text-decoration:none;padding:1em 1.5em;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-signal{background:var(--signal);color:var(--ink)}
+.btn-signal:hover{background:#ffc928}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:var(--white);background:transparent}
+.btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Navegación */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(246,247,248,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.nav-logo img{height:34px;width:auto}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-size:.9rem;color:var(--steel-d);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links .btn{color:var(--ink);padding:.8em 1.2em}
+.nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--ink)}
+.nav-toggle svg{width:26px;height:26px}
+@media (max-width:860px){
+  .nav-toggle{display:block}
+  .nav-links{position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px var(--gut) 20px}
+  .nav-links li a{display:block;padding:14px 0;border-bottom:1px solid var(--concrete)}
+  .nav-links .btn{margin-top:14px;justify-content:center;border:0}
+  .nav:not(.open) .nav-links{display:none}
+}
+
+/* Hero */
+.hero{position:relative;background:var(--ink);color:var(--white);overflow:hidden}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,20,22,.92) 0%,rgba(18,20,22,.78) 42%,rgba(18,20,22,.25) 100%)}
+.hero .wrap{position:relative;padding-block:clamp(72px,12vw,150px)}
+.frame{position:relative;padding:28px 0 28px 30px;max-width:720px}
+.frame::before{content:"";position:absolute;left:0;top:0;bottom:0;width:22px;border:1.5px solid currentColor;border-right:0}
+.hero .label{color:var(--steel)}
+.hero h1{font-size:clamp(2.2rem,5.4vw,4.1rem);line-height:1.08;margin-top:18px;text-transform:uppercase;letter-spacing:.04em}
+.hero h1 b{font-weight:500}
+.hero h1 span{color:var(--steel)}
+.hero p.lead{margin-top:22px;font-size:1.1rem;color:#c9ced3;max-width:56ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:56px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);max-width:720px}
+.hero-meta span{font:400 .78rem/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:#aab1b8}
+
+/* Secciones */
+section{padding-block:clamp(64px,9vw,112px)}
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(36px,5vw,56px);max-width:720px}
+.sec-head h2{font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.15;text-transform:uppercase;letter-spacing:.05em}
+.sec-head h2 span{color:var(--steel)}
+
+/* Nosotros */
+.about-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:center}
+.about-text{display:grid;gap:20px}
+.about-text p{font-size:1.08rem;color:#33383d;max-width:52ch}
+.about-text p.big{font-family:var(--f-display);font-weight:300;font-size:1.45rem;line-height:1.45;color:var(--ink)}
+.about-fig{position:relative;margin:0}
+.about-fig img{width:100%;height:auto;filter:grayscale(1)}
+.about-fig figcaption{margin-top:12px}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+
+/* Objetivo */
+.goal{background:var(--ink);color:var(--white)}
+.goal .wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(24px,5vw,72px);align-items:start}
+.goal .label{color:var(--steel);padding-top:.7em}
+.goal blockquote{margin:0;font-family:var(--f-display);font-weight:300;font-size:clamp(1.5rem,3.2vw,2.35rem);line-height:1.35;text-wrap:balance}
+.goal blockquote em{font-style:normal;color:var(--signal)}
+@media (max-width:760px){.goal .wrap{grid-template-columns:1fr}}
+
+/* Servicios por fase de obra */
+.phases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1.5px solid var(--ink)}
+.phase{padding:26px 26px 30px 0;display:grid;gap:22px;align-content:start}
+.phase + .phase{padding-left:26px;border-left:1px solid var(--line)}
+.phase-head{display:grid;gap:8px}
+.phase-head h3{font-size:1.3rem;font-weight:400;text-transform:uppercase;letter-spacing:.06em}
+.phase-head p{font-size:.88rem;color:var(--steel-d)}
+.svc{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding-top:20px;border-top:1px solid var(--line)}
+.svc svg{width:36px;height:36px;stroke:var(--ink);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.svc h4{margin:0 0 4px;font:600 .95rem/1.3 var(--f-body);letter-spacing:.01em}
+.svc p{font-size:.88rem;line-height:1.55;color:#4a5056}
+@media (max-width:1020px){.phases{grid-template-columns:repeat(2,minmax(0,1fr))}.phase:nth-child(3){padding-left:0;border-left:0}.phase:nth-child(n+3){border-top:1px solid var(--line);margin-top:8px}}
+@media (max-width:600px){.phases{grid-template-columns:1fr}.phase,.phase + .phase{padding-left:0;border-left:0}.phase + .phase{border-top:1px solid var(--line);margin-top:8px}}
+
+/* Seguridad */
+.safety{background:var(--concrete)}
+.safety-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.safety-fig{margin:0;position:relative}
+.safety-fig img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;max-width:100%}
+.tape{height:10px;background:repeating-linear-gradient(-45deg,var(--signal) 0 14px,var(--ink) 14px 28px)}
+.safety-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:18px}
+.safety-list li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start}
+.safety-list svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.8;margin-top:3px}
+.safety-list b{display:block;font-weight:600}
+.safety-list span{color:#4a5056;font-size:.95rem}
+@media (max-width:860px){.safety-grid{grid-template-columns:1fr}.safety-fig img{aspect-ratio:4/3}}
+
+/* Proyectos */
+.gallery{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:12px}
+.gallery button{all:unset;cursor:zoom-in;position:relative;display:block;overflow:hidden;background:var(--concrete)}
+.gallery button:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .5s}
+.gallery button:first-child img{aspect-ratio:auto}
+.gallery button:hover img{transform:scale(1.03)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 14px;background:linear-gradient(transparent,rgba(18,20,22,.85));color:var(--white);font-size:.85rem}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}.gallery button:first-child{grid-column:1/-1}.gallery button:first-child img{aspect-ratio:16/9}}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(10,11,12,.94);display:grid;place-items:center;padding:24px}
+.lightbox img{max-height:86vh;width:auto;max-width:100%}
+.lightbox button{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:16px;background:none;border:1px solid rgba(255,255,255,.4);color:var(--white);font:500 .85rem var(--f-body);padding:.6em 1em;cursor:pointer}
+
+/* Contacto */
+.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px)}
+.contact-info{display:grid;gap:26px;align-content:start}
+.contact-info dl{margin:0;display:grid;gap:20px}
+.contact-info dt{margin-bottom:6px}
+.contact-info dd{margin:0;font-size:1.08rem}
+.contact-info dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.contact-info dd a:hover{border-color:var(--ink)}
+.pending{color:var(--steel-d);font-style:italic}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:var(--white);border:1px solid var(--line);padding:clamp(22px,3.5vw,38px)}
+.field{display:grid;gap:8px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font:500 .72rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--steel-d)}
+.field input,.field select,.field textarea{font:400 1rem var(--f-body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:0;padding:.8em .9em;width:100%}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);background:var(--white)}
+form .btn{justify-self:start;border:0}
+.form-msg{grid-column:1/-1;font-size:.92rem;padding:12px 14px;background:var(--concrete)}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:520px){form{grid-template-columns:1fr}}
+
+/* Footer */
+footer{background:var(--ink);color:#aab1b8;padding-block:56px 36px;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.foot-grid img{height:40px;width:auto}
+.foot-grid p{margin-top:18px;max-width:40ch}
+.foot-grid h3{font:500 .72rem/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:16px}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot-grid a{text-decoration:none}
+.foot-grid a:hover{color:var(--white)}
+.foot-bottom{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:400 .75rem/1.5 var(--f-mono);letter-spacing:.06em}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}.foot-grid > div:first-child{grid-column:1/-1}}
+
+/* WhatsApp flotante */
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s}
+.wa:hover{transform:scale(1.06)}
+.wa svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap">
+    <a href="#top" class="nav-logo" aria-label="Estructura Group S.A., inicio"><img src="assets/img/logo.png" alt="Estructura Group S.A." width="139" height="34"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#seguridad">Seguridad</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto" class="btn btn-signal">Solicitar cotización</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-img">
+    <picture>
+      <source srcset="assets/img/obra-panoramica.webp" type="image/webp">
+      <img src="assets/img/obra-panoramica.jpg" alt="Montaje de estructura metálica en un complejo de bodegas" width="1280" height="662" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="wrap">
+    <div class="frame">
+      <p class="label">Construcción · Remodelación · Mejoras</p>
+      <h1 id="hero-title"><b>Construimos</b> los espacios donde <span>su empresa produce</span></h1>
+      <p class="lead">Obra civil, estructuras metálicas y acabados para naves, bodegas, oficinas y plantas. Planificamos, ejecutamos y entregamos con personal equipado para trabajo en altura.</p>
+      <div class="hero-cta">
+        <a href="#contacto" class="btn btn-signal">Solicitar cotización
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <span>Planificación y diseño</span><span>Obra civil</span><span>Estructuras metálicas</span><span>Sistemas anticaídas</span>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <p class="label">¿Quiénes somos?</p>
+      <h2 id="about-title" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Quiénes somos</h2>
+      <p class="big">Somos una empresa enfocada en dar solución a sus proyectos de construcción, remodelación y mejoras.</p>
+      <p>Realizamos con excelencia todo tipo de trabajo que haga de sus operaciones un lugar productivo para su empresa: desde la losa y la estructura hasta el cielo falso y las tuberías, con un solo equipo responsable de principio a fin.</p>
+    </div>
+    <figure class="about-fig">
+      <picture>
+        <source srcset="assets/img/triptico.webp" type="image/webp">
+        <img src="assets/img/triptico.jpg" alt="Estructura metálica de techo, cubierta de lámina y personal con arnés sobre techo" width="1160" height="616" loading="lazy">
+      </picture>
+      <figcaption class="label">Estructuras · Cubiertas · Trabajo en altura</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="goal" aria-label="Objetivo">
+  <div class="wrap">
+    <p class="label">Objetivo</p>
+    <blockquote>Brindar soluciones <em>eficientes y rentables</em> para proyectos de cualquier magnitud, asegurando la satisfacción del cliente durante todo el proceso de planificación y ejecución.</blockquote>
+  </div>
+</section>
+
+<section id="servicios" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Servicios</p>
+      <h2 id="svc-title">Un solo equipo, <span>de los planos a la entrega</span></h2>
+    </div>
+    <div class="phases">
+      <div class="phase">
+        <div class="phase-head"><h3>Preconstrucción</h3><p>Antes de mover tierra</p></div>
+        <div class="svc">
+          <svg viewBox="0 0 40 40"><path d="M6 34V8h22l6 6v20z"/><path d="M28 8v6h6M11 16h12M11 22h18M11 28h10"/></svg>
+          <div><h4>Planificación y diseño</h4><p>Levantamiento, planos, presupuesto y cronograma de obra.</p></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 40 40"><path d="M5 30h30M9 30V14l11-7 11 7v16"/><path d="M9 14h22M14 30V20h12v10"/><path d="M20 7v-3"/></svg>
+          <div><h4>Análisis estructural</h4><p>Cálculo y revisión de cargas para estructuras nuevas y existentes.</p></div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-head"><h3>Obra gris</h3><p>Terreno, base y redes</p></div>
+        <div class="svc">
+          <svg viewBox="0 0 40 40"><path d="M4 32h32M8 32V18h10v14M22 32V10h10v22"/><path d="M8 24h10M22 18h10M22 25h10"/></svg>
+          <div><h4>Obra civil</h4><p>Cimentaciones, muros, losas y ampliaciones.</p></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 40 40"><path d="M4 32h32"/><path d="M6 32c4-8 10-12 18-12s9 6 12 12"/><path d="M14 14l6-6 8 4"/></svg>
+          <div><h4>Movimiento de tierras</h4><p>Corte, relleno, nivelación y compactación del terreno.</p></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 40 40"><path d="M4 16h14v8H4zM18 18h10a6 6 0 0 1 6 6v10"/><path d="M28 24v10M18 22h10"/></svg>
+          <div><h4>Tuberías</h4><p>Redes hidráulicas, sanitarias y de drenaje.</p></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 40 40"><path d="M10 34L16 6M30 34L24 6M20 10v4M20 19v4M20 28v4"/></svg>
+          <div><h4>Pavimentos</h4><p>Pisos industriales, patios de maniobra y accesos.</p></div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-head"><h3>Estructura y acabados</h3><p>Lo que queda a la vista</p></div>
+        <div class="svc">
+          <svg viewBox="0 0 40 40"><path d="M4 18L20 8l16 10M8 16v18M32 16v18"/><path d="M8 16l6 6 6-6 6 6 6-6M4 34h32"/></svg>
+          <div><h4>Estructuras metálicas</h4><p>Naves, techos, mezzanines y marquesinas: fabricación y montaje.</p></div>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 40 40"><path d="M4 10h32M4 10v24M36 10v24"/><path d="M4 16h32M14 16v18M26 16v18"/></svg>
+          <div><h4>Tablayeso y cielo falso</h4><p>Divisiones, oficinas y cielos suspendidos.</p></div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-head"><h3>Seguridad en altura</h3><p>Para su personal y el nuestro</p></div>
+        <div class="svc">
+          <svg viewBox="0 0 40 40"><path d="M4 8h32"/><path d="M20 8v10"/><circle cx="20" cy="21" r="3"/><path d="M14 36l2-9h8l2 9M15 27l-3-4M25 27l3-4"/></svg>
+          <div><h4>Sistemas anticaídas</h4><p>Líneas de vida y puntos de anclaje para techos y estructuras.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="seguridad" class="safety" aria-labelledby="safety-title">
+  <div class="wrap safety-grid">
+    <figure class="safety-fig">
+      <picture>
+        <source srcset="assets/img/obra-soldadura.webp" type="image/webp">
+        <img src="assets/img/obra-soldadura.jpg" alt="Soldador con arnés trabajando sobre andamio en una estructura metálica" width="960" height="1280" loading="lazy">
+      </picture>
+      <div class="tape" aria-hidden="true"></div>
+    </figure>
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="label">Seguridad industrial</p>
+        <h2 id="safety-title">Trabajo en altura, <span>hecho con protocolo</span></h2>
+      </div>
+      <ul class="safety-list">
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg><div><b>Equipo de protección completo</b><span>Casco, arnés, guantes y calzado de seguridad en cada frente de trabajo.</span></div></li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg><div><b>Líneas de vida y anclajes</b><span>Instalamos los sistemas anticaídas que usamos, y los dejamos para su operación.</span></div></li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg><div><b>Obra ordenada y señalizada</b><span>Áreas delimitadas para que su planta siga operando mientras construimos.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos" aria-labelledby="proj-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Proyectos</p>
+      <h2 id="proj-title">En obra</h2>
+    </div>
+    <div class="gallery" id="gallery">
+      <button type="button" data-full="assets/img/obra-panoramica.jpg">
+        <img src="assets/img/obra-panoramica.jpg" alt="Montaje de estructura metálica junto a bodegas" loading="lazy">
+        <figcaption>Montaje de estructura metálica en complejo de bodegas</figcaption>
+      </button>
+      <button type="button" data-full="assets/img/obra-estructura.jpg">
+        <img src="assets/img/obra-estructura.jpg" alt="Columnas y vigas de acero sobre losa de concreto" loading="lazy">
+        <figcaption>Columnas y vigas de acero</figcaption>
+      </button>
+      <button type="button" data-full="assets/img/obra-soldadura.jpg">
+        <img src="assets/img/obra-soldadura.jpg" alt="Soldadura de estructura desde andamio" loading="lazy">
+        <figcaption>Soldadura en altura</figcaption>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="background:var(--white)" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="label">Contacto</p>
+        <h2 id="contact-title">Cuéntenos <span>su proyecto</span></h2>
+      </div>
+      <p style="color:#4a5056;max-width:44ch">Envíenos los datos básicos y le respondemos con una visita técnica o una propuesta.</p>
+      <dl>
+        <div><dt class="label">WhatsApp / Teléfono</dt><dd id="ciPhone"><span class="pending">Por confirmar</span></dd></div>
+        <div><dt class="label">Correo</dt><dd id="ciEmail"><span class="pending">Por confirmar</span></dd></div>
+        <div><dt class="label">Ubicación</dt><dd>Guatemala</dd></div>
+      </dl>
+    </div>
+    <form id="contactForm" novalidate>
+      <div class="field"><label for="f-name">Nombre</label><input id="f-name" name="nombre" autocomplete="name" required></div>
+      <div class="field"><label for="f-company">Empresa</label><input id="f-company" name="empresa" autocomplete="organization"></div>
+      <div class="field"><label for="f-phone">Teléfono</label><input id="f-phone" name="telefono" type="tel" autocomplete="tel" required></div>
+      <div class="field"><label for="f-email">Correo</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field full"><label for="f-service">Servicio</label>
+        <select id="f-service" name="servicio">
+          <option>Planificación y diseño</option><option>Obra civil</option><option>Movimiento de tierras</option>
+          <option>Estructuras metálicas</option><option>Tablayeso y cielo falso</option><option>Tuberías</option>
+          <option>Análisis estructural</option><option>Sistemas anticaídas</option><option>Pavimentos</option><option>Otro / varios</option>
+        </select></div>
+      <div class="field full"><label for="f-msg">Descripción del proyecto</label><textarea id="f-msg" name="mensaje" placeholder="Ubicación, medidas aproximadas, plazo deseado…"></textarea></div>
+      <button type="submit" class="btn btn-signal">Enviar solicitud</button>
+      <p class="form-msg" id="formMsg" hidden></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/img/logo-light.png" alt="Estructura Group S.A." width="163" height="40" loading="lazy">
+        <p>Construcción, remodelación y mejoras para empresas en Guatemala.</p>
+      </div>
+      <div>
+        <h3>Servicios</h3>
+        <ul><li><a href="#servicios">Obra civil</a></li><li><a href="#servicios">Estructuras metálicas</a></li><li><a href="#servicios">Tablayeso y cielo falso</a></li><li><a href="#servicios">Sistemas anticaídas</a></li></ul>
+      </div>
+      <div>
+        <h3>Empresa</h3>
+        <ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#contacto">Contacto</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="yr">2026</span> Estructura Group S.A.</span><span>estructura-sa.com</span></div>
+  </div>
+</footer>
+
+<a class="wa" id="waBtn" href="#contacto" aria-label="Escríbanos por WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.9 1 3.9.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+/* ===== CONFIGURACIÓN — llenar cuando se tengan los datos ===== */
+const CONFIG = {
+  whatsapp: "",        // solo dígitos con código de país, ej. "50255551234"
+  telefono: "",        // como se muestra, ej. "+502 5555-1234"
+  correo: "",          // ej. "info@estructura-sa.com"
+  formspree: ""        // ID del form de Formspree, ej. "xyzabcd"
+};
+/* ============================================================== */
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const nav = document.querySelector('.nav'), tg = document.getElementById('navToggle');
+  tg.addEventListener('click', () => { const o = nav.classList.toggle('open'); tg.setAttribute('aria-expanded', o); });
+  document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); tg.setAttribute('aria-expanded', false); }));
+
+  const waText = encodeURIComponent('Hola, me interesa cotizar un proyecto con Estructura Group.');
+  if (CONFIG.whatsapp) {
+    const wa = document.getElementById('waBtn');
+    wa.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + waText; wa.target = '_blank'; wa.rel = 'noopener';
+  }
+  if (CONFIG.telefono) {
+    document.getElementById('ciPhone').innerHTML = CONFIG.whatsapp
+      ? '<a href="https://wa.me/' + CONFIG.whatsapp + '?text=' + waText + '" target="_blank" rel="noopener">' + CONFIG.telefono + '</a>'
+      : CONFIG.telefono;
+  }
+  if (CONFIG.correo) document.getElementById('ciEmail').innerHTML = '<a href="mailto:' + CONFIG.correo + '">' + CONFIG.correo + '</a>';
+
+  // Galería
+  document.querySelectorAll('#gallery button').forEach(b => b.addEventListener('click', () => {
+    const lb = document.createElement('div'); lb.className = 'lightbox'; lb.setAttribute('role','dialog'); lb.setAttribute('aria-modal','true');
+    lb.innerHTML = '<img alt=""><button type="button">Cerrar</button>';
+    lb.querySelector('img').src = b.dataset.full; lb.querySelector('img').alt = b.querySelector('img').alt;
+    const close = () => { lb.remove(); document.removeEventListener('keydown', esc); b.focus(); };
+    const esc = e => { if (e.key === 'Escape') close(); };
+    lb.addEventListener('click', e => { if (e.target !== lb.querySelector('img')) close(); });
+    document.addEventListener('keydown', esc); document.body.appendChild(lb); lb.querySelector('button').focus();
+  }));
+
+  // Formulario
+  const form = document.getElementById('contactForm'), msg = document.getElementById('formMsg');
+  const show = t => { msg.textContent = t; msg.hidden = false; };
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const req = ['f-name','f-phone','f-email'].map(id => document.getElementById(id));
+    const bad = req.find(i => !i.value.trim() || (i.type === 'email' && !/^\S+@\S+\.\S+$/.test(i.value)));
+    if (bad) { show('Revise el campo "' + bad.previousElementSibling.textContent + '" para poder enviar la solicitud.'); bad.focus(); return; }
+    if (!CONFIG.formspree) { show('El formulario aún no está conectado. Mientras tanto, escríbanos por WhatsApp.'); return; }
+    const btn = form.querySelector('button[type=submit]'); btn.disabled = true; btn.textContent = 'Enviando…';
+    try {
+      const r = await fetch('https://formspree.io/f/' + CONFIG.formspree, { method:'POST', body:new FormData(form), headers:{Accept:'application/json'} });
+      if (!r.ok) throw 0;
+      form.reset(); show('Solicitud enviada. Le contactaremos a la brevedad.');
+    } catch (_) { show('No se pudo enviar. Intente de nuevo o escríbanos por WhatsApp.'); }
+    btn.disabled = false; btn.textContent = 'Enviar solicitud';
+  });
+})();
+</script>
+</body>
+</html>
