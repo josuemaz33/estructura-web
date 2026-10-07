@@ -399,7 +399,8 @@ footer{background:var(--ink);color:#aab1b8;padding-block:56px 36px;font-size:.9r
         <div><dt class="label">Ubicación</dt><dd>Guatemala</dd></div>
       </dl>
     </div>
-    <form id="contactForm" novalidate>
+    <form id="contactForm" action="https://formspree.io/f/mdeaezab" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Nueva solicitud desde estructura-sa.com">
       <div class="field"><label for="f-name">Nombre</label><input id="f-name" name="nombre" autocomplete="name" required></div>
       <div class="field"><label for="f-company">Empresa</label><input id="f-company" name="empresa" autocomplete="organization"></div>
       <div class="field"><label for="f-phone">Teléfono</label><input id="f-phone" name="telefono" type="tel" autocomplete="tel" required></div>
@@ -450,7 +451,7 @@ footer{background:var(--ink);color:#aab1b8;padding-block:56px 36px;font-size:.9r
 /* ===== CONFIGURACIÓN — llenar cuando se tengan los datos ===== */
 const CONFIG = {
   whatsapp: "50236560225",   // solo dígitos con código de país
-  formspree: ""        // ID del form de Formspree, ej. "xyzabcd"
+  formspree: "mdeaezab"   // Formspree → proyectos@estructura-sa.com
 };
 /* ============================================================== */
 (function(){
