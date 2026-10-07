@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Estructura Group S.A.</title>
 <meta name="description" content="Estructura Group S.A. — construcción, remodelación y mejoras para empresas en Guatemala. Obra civil, estructuras metálicas, movimiento de tierras, tablayeso, tuberías, pavimentos y sistemas anticaídas.">
-<link rel="canonical" href="https://estructura-sa.com/">
+<link rel="canonical" href="https://www.estructura-sa.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Estructura Group S.A. | Construcción y estructuras metálicas en Guatemala">
 <meta property="og:description" content="Soluciones de construcción, remodelación y mejoras para su empresa, desde la planificación hasta la entrega.">
-<meta property="og:image" content="https://estructura-sa.com/assets/img/og.jpg">
-<meta property="og:url" content="https://estructura-sa.com/">
+<meta property="og:image" content="https://www.estructura-sa.com/assets/img/og.jpg">
+<meta property="og:url" content="https://www.estructura-sa.com/">
 <meta property="og:locale" content="es_GT">
 <meta name="theme-color" content="#121416">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
@@ -23,10 +23,12 @@
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
   "name": "Estructura Group S.A.",
-  "url": "https://estructura-sa.com/",
-  "logo": "https://estructura-sa.com/assets/img/logo.png",
-  "image": "https://estructura-sa.com/assets/img/og.jpg",
+  "url": "https://www.estructura-sa.com/",
+  "logo": "https://www.estructura-sa.com/assets/img/logo.png",
+  "image": "https://www.estructura-sa.com/assets/img/og.jpg",
   "description": "Construcción, remodelación y mejoras para empresas: obra civil, estructuras metálicas, movimiento de tierras, tablayeso y cielo falso, tuberías, análisis estructural, sistemas anticaídas y pavimentos.",
+  "telephone": ["+502 3656-0225", "+502 6627-2554"],
+  "email": "proyectos@estructura-sa.com",
   "areaServed": "Guatemala",
   "address": {"@type": "PostalAddress", "addressCountry": "GT"}
 }
@@ -192,7 +194,7 @@ form .btn{justify-self:start;border:0}
 
 /* Footer */
 footer{background:var(--ink);color:#aab1b8;padding-block:56px 36px;font-size:.9rem}
-.foot-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.3fr);gap:40px}
 .foot-grid img{height:40px;width:auto}
 .foot-grid p{margin-top:18px;max-width:40ch}
 .foot-grid h3{font:500 .72rem/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:16px}
@@ -390,8 +392,9 @@ footer{background:var(--ink);color:#aab1b8;padding-block:56px 36px;font-size:.9r
       </div>
       <p style="color:#4a5056;max-width:44ch">Envíenos los datos básicos y le respondemos con una visita técnica o una propuesta.</p>
       <dl>
-        <div><dt class="label">WhatsApp / Teléfono</dt><dd id="ciPhone"><span class="pending">Por confirmar</span></dd></div>
-        <div><dt class="label">Correo</dt><dd id="ciEmail"><span class="pending">Por confirmar</span></dd></div>
+        <div><dt class="label">Proyectos · WhatsApp</dt><dd><a href="https://wa.me/50236560225?text=Hola%2C%20me%20interesa%20cotizar%20un%20proyecto%20con%20Estructura%20Group." target="_blank" rel="noopener">+(502) 3656-0225</a></dd></div>
+        <div><dt class="label">Proyectos · Oficina</dt><dd><a href="tel:+50266272554">+(502) 6627-2554</a></dd></div>
+        <div><dt class="label">Correo</dt><dd><a href="mailto:proyectos@estructura-sa.com">proyectos@estructura-sa.com</a></dd></div>
         <div><dt class="label">Ubicación</dt><dd>Guatemala</dd></div>
       </dl>
     </div>
@@ -429,8 +432,12 @@ footer{background:var(--ink);color:#aab1b8;padding-block:56px 36px;font-size:.9r
         <h3>Empresa</h3>
         <ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#contacto">Contacto</a></li></ul>
       </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul><li><a href="https://wa.me/50236560225" target="_blank" rel="noopener">+(502) 3656-0225</a></li><li><a href="tel:+50266272554">+(502) 6627-2554</a></li><li><a href="mailto:proyectos@estructura-sa.com">proyectos@estructura-sa.com</a></li></ul>
+      </div>
     </div>
-    <div class="foot-bottom"><span>© <span id="yr">2026</span> Estructura Group S.A.</span><span>estructura-sa.com</span></div>
+    <div class="foot-bottom"><span>© <span id="yr">2026</span> Estructura Group S.A.</span><span>www.estructura-sa.com</span></div>
   </div>
 </footer>
 
@@ -441,9 +448,7 @@ footer{background:var(--ink);color:#aab1b8;padding-block:56px 36px;font-size:.9r
 <script>
 /* ===== CONFIGURACIÓN — llenar cuando se tengan los datos ===== */
 const CONFIG = {
-  whatsapp: "",        // solo dígitos con código de país, ej. "50255551234"
-  telefono: "",        // como se muestra, ej. "+502 5555-1234"
-  correo: "",          // ej. "info@estructura-sa.com"
+  whatsapp: "50236560225",   // solo dígitos con código de país
   formspree: ""        // ID del form de Formspree, ej. "xyzabcd"
 };
 /* ============================================================== */
@@ -458,13 +463,6 @@ const CONFIG = {
     const wa = document.getElementById('waBtn');
     wa.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + waText; wa.target = '_blank'; wa.rel = 'noopener';
   }
-  if (CONFIG.telefono) {
-    document.getElementById('ciPhone').innerHTML = CONFIG.whatsapp
-      ? '<a href="https://wa.me/' + CONFIG.whatsapp + '?text=' + waText + '" target="_blank" rel="noopener">' + CONFIG.telefono + '</a>'
-      : CONFIG.telefono;
-  }
-  if (CONFIG.correo) document.getElementById('ciEmail').innerHTML = '<a href="mailto:' + CONFIG.correo + '">' + CONFIG.correo + '</a>';
-
   // Galería
   document.querySelectorAll('#gallery button').forEach(b => b.addEventListener('click', () => {
     const lb = document.createElement('div'); lb.className = 'lightbox'; lb.setAttribute('role','dialog'); lb.setAttribute('aria-modal','true');
